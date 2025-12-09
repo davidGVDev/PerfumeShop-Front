@@ -1,0 +1,153 @@
+@use '@angular/material' as mat;
+
+// ========================================
+// PALETA 1: TEAL (Primary) - #1e7883
+// ========================================
+$primary-palette: (
+  50: #e4eff0,
+  100: #bbd7da,
+  200: #8ebdc2,
+  300: #60a3a9,
+  400: #3e8f96,
+  500: #1e7883,  // Color base
+  600: #1a707b,
+  700: #166570,
+  800: #125b66,
+  900: #0a4853,
+  A100: #85e0eb,
+  A200: #52d4e3,
+  A400: #1fc8db,
+  A700: #05b7cb,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: white,
+  ),
+);
+
+// ========================================
+// PALETA 2: SAGE/GRIS VERDOSO (Secondary) - #a9bdbb
+// ========================================
+$secondary-palette: (
+  50: #f4f7f7,
+  100: #e4ebea,
+  200: #d2dddc,
+  300: #c0cfce,
+  400: #b3c5c3,
+  500: #a9bdbb,  // Color base
+  600: #9fb5b3,
+  700: #93acaa,
+  800: #88a4a1,
+  900: #769691,
+  A100: #ffffff,
+  A200: #e8f5f4,
+  A400: #c5e8e5,
+  A700: #b3e0dc,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: rgba(black, 0.87),
+    700: rgba(black, 0.87),
+    800: rgba(black, 0.87),
+    900: rgba(black, 0.87),
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: rgba(black, 0.87),
+  ),
+);
+
+// ========================================
+// PALETA 3: CORAL (Tertiary) - #ee7256
+// ========================================
+$tertiary-palette: (
+  50: #fdf0ed,
+  100: #fad9d1,
+  200: #f7c0b3,
+  300: #f3a694,
+  400: #f1937d,
+  500: #ee7256,  // Color base
+  600: #ec6a4f,
+  700: #e95f45,
+  800: #e7553c,
+  900: #e2422b,
+  A100: #ffffff,
+  A200: #ffe8e5,
+  A400: #ffb9b2,
+  A700: #ffa298,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: rgba(black, 0.87),
+  ),
+);
+
+// ========================================
+// ERROR: ROJO (Material por defecto)
+// ========================================
+$error-palette: (
+  50: #ffebee,
+  100: #ffcdd2,
+  200: #ef9a9a,
+  300: #e57373,
+  400: #ef5350,
+  500: #f44336,
+  600: #e53935,
+  700: #d32f2f,
+  800: #c62828,
+  900: #b71c1c,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: white,
+    A400: white,
+    A700: white,
+  ),
+);
+
+// ========================================
+// EXPORTAR PALETAS
+// ========================================
+$my-primary: $primary-palette;
+$my-secondary: $secondary-palette;
+$my-tertiary: $tertiary-palette;
+$my-error: $error-palette;

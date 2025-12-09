@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+// ========================================
+// CONFIGURACIÓN DE FUENTES
+// ========================================
+
+// Fuente 1: Principal (Roboto - Material por defecto)
+$font-primary: 'Roboto', sans-serif;
+
+// Fuente 2: Secundaria (Inter - Moderna)
+$font-secondary: 'Inter', sans-serif;
+
+// Fuente 3: Terciaria (Poppins - Elegante)
+$font-tertiary: 'Poppins', sans-serif;
+
+// Variable para cambiar fácilmente
+$current-font-family: $font-primary;
+
+// Exportar para uso global
+:export {
+  fontPrimary: $font-primary;
+  fontSecondary: $font-secondary;
+  fontTertiary: $font-tertiary;
+}
