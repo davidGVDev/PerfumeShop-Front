@@ -17,7 +17,14 @@
         }
       </mat-autocomplete>
     </mat-form-field>
+    
+    <!-- Filters -->
     <span class="font-tertiary filters-title">Filters</span>
+    <!-- Buttons -->
+    <div class="filters-buttons-container">
+      <button matButton="elevated" class="apply-filters-btn font-secondary">Apply filters</button>
+      <button matButton="elevated" class="reset-filters-btn font-secondary">Clear filters</button>
+    </div>
     <div class="filters-container">
       <!-- Gender filter -->
       <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
@@ -54,13 +61,36 @@
         </mat-expansion-panel-header>
         <p>I'm visible because I am open</p>
       </mat-expansion-panel>
+      <!--Price filter -->
+      <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Price </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      <!--Year filter -->
+      <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Year </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      <!--Rating filter -->
+      <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Rating </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
     </div>
-    <div class="filters-buttons-container">
-      <button matButton="elevated" class="apply-filters-btn font-secondary">Apply filters</button>
-      <button matButton="elevated" class="reset-filters-btn font-secondary">Clear filters</button>
-    </div>
+    
   </div>
 
   <!-- Products list -->
-  <div class="products-list"></div>
+  <div class="products-list">
+    <!-- Products cards -->
+     <app-product-card-vertical></app-product-card-vertical>
+     <!-- <app-product-card-horizontal></app-product-card-horizontal> -->
+
+  </div>
 </div>

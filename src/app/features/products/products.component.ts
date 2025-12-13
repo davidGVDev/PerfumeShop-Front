@@ -10,6 +10,8 @@ import { map, startWith } from 'rxjs/operators';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
+import { ProductCardVertical } from '../../shared/components/product-card-vertical/product-card-vertical';
+import { ProductCardHorizontal } from '../../shared/components/product-card-horizontal/product-card-horizontal';
 export interface User {
   name: string;
 }
@@ -17,8 +19,8 @@ export interface User {
 @Component({
   selector: 'app-products',
   imports: [
-    // ProductCardVertical,
-    // ProductCardHorizontal,
+    ProductCardVertical,
+    ProductCardHorizontal,
     MatAutocompleteModule,
     FormsModule,
     MatFormFieldModule,

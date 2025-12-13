@@ -24,9 +24,8 @@ export interface ProductFilters {
   // Rangos numéricos
   priceMin?: number;
   priceMax?: number;
-  yearMin?: number;
-  yearMax?: number;
-  ratingMin?: number;
+  year?: number;
+  rating?: number;
 
   // Paginación
   page?: number;
