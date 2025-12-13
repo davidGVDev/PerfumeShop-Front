@@ -245,9 +245,9 @@ Product data structure inspired by [Fragella API](https://api.fragella.com/) - a
 
 **Your Name**
 
-- Portfolio: [yourportfolio.com](https://davidgvdev.github.io/CV-Portfolio/)
-- GitHub: [@yourusername](https://github.com/davidGVDev)
-- LinkedIn: [Your Name](https://www.linkedin.com/in/david-gustavo-ventura-villesca-2a158615b/)
+- Portfolio: [https://davidgvdev.github.io/CV-Portfolio/](https://davidgvdev.github.io/CV-Portfolio/)
+- GitHub: [@davidGVDev](https://github.com/davidGVDev)
+- LinkedIn: [David Gustavo Ventura Villesca](https://www.linkedin.com/in/david-gustavo-ventura-villesca-2a158615b/)
 
 ---
 
