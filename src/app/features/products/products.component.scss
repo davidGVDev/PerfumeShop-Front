@@ -1,5 +1,5 @@
 :host {
-  display: block;
+  display: flex;
   flex: 1;
   width: 100%;
   min-height: 100%;
@@ -7,21 +7,72 @@
 .products-page {
   width: 100%;
   min-height: 100%;
-  height: auto;
-  padding: 0;
   display: flex;
+  flex: 1;
   .products-filters {
     width: 20%;
     height: auto;
-    border: 1px solid red;
-    padding: 10px;
-    margin:8px
+    padding: 20px 15px;
+    border-right:1px solid var(--my-secondary-500);
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .autocomplete-form-field {
+      width: 350px;
+      color: var(--my-secondary-500);
+    }
+    .filters-title {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: var(--my-tertiary-500);
+      margin-bottom: 10px;
+    }
+    .filters-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 10px 0;
+    }
+    .filters-buttons-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      .apply-filters-btn {
+        width: 50%;
+        background-color: var(--my-tertiary-500);
+        color: var(--my-secondary-100);
+        border: 1px solid var(--my-tertiary-500);
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+        &:hover {
+          border: 1px solid var(--my-secondary-500);
+        }
+      }
+      .reset-filters-btn {
+        width: 50%;
+        background-color: var(--my-secondary-500);
+        color: var(--my-secondary-100);
+        border: 1px solid var(--my-secondary-500);
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+        &:hover {
+          border: 1px solid var(--my-tertiary-500);
+        }
+      }
+    }
   }
   .products-list {
     width: 80%;
     height: auto;
-    border: 1px solid blue;
     padding: 10px;
-    margin:8px
+    margin: 8px;
   }
 }

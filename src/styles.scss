@@ -14,6 +14,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
+:root {
+  @include mat.autocomplete-overrides((
+    background-color: var(--my-secondary-200),
+    container-shape: 19px,
+    container-elevation-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+  ));
+  @include mat.expansion-overrides((
+    container-background-color: var(--my-secondary-100),
+    container-text-color: var(--my-primary-500),
+    container-text-font: fonts.$font-tertiary,
+    header-text-font: fonts.$font-tertiary,
+    header-indicator-color: var(--my-tertiary-500),
+  ));
+}
+
 html {
   @include mat.theme(
     (

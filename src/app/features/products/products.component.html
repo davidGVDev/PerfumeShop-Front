@@ -1,4 +1,66 @@
 <div class="products-page">
-    <div class="products-filters"></div>
-    <div class="products-list"></div>
+  <!-- Products filters -->
+  <div class="products-filters">
+    <!-- Autocomplete for search -->
+    <mat-form-field appearance="outline" class="example-full-width autocomplete-form-field">
+      <mat-label class="font-tertiary">Search for a product</mat-label>
+      <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto" />
+      <mat-autocomplete
+        class="mat-autocomplete-options"
+        #auto="matAutocomplete"
+        [displayWith]="displayFn"
+      >
+        @for (option of filteredOptions | async; track option) {
+        <mat-option [value]="option">
+          {{ option.name }}
+        </mat-option>
+        }
+      </mat-autocomplete>
+    </mat-form-field>
+    <span class="font-tertiary filters-title">Filters</span>
+    <div class="filters-container">
+      <!-- Gender filter -->
+      <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Gender </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      <!-- Brand filter -->
+      <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Brand </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      <!--Notes filter -->
+      <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Notes </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      <!--Season filter -->
+      <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Season </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      <!--Occasion filter -->
+      <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title> Occasion </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    </div>
+    <div class="filters-buttons-container">
+      <button matButton="elevated" class="apply-filters-btn font-secondary">Apply filters</button>
+      <button matButton="elevated" class="reset-filters-btn font-secondary">Clear filters</button>
+    </div>
+  </div>
+
+  <!-- Products list -->
+  <div class="products-list"></div>
 </div>
