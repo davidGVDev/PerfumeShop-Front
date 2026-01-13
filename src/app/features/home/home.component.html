@@ -1,6 +1,165 @@
 <div class="home-page">
   <div class="home-page-content">
-    <!-- <app-product-card-vertical></app-product-card-vertical> -->
-    <!-- <app-product-card-horizontal></app-product-card-horizontal> -->
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-badge">Premium Collection</span>
+        <h1>Discover Your Signature Scent</h1>
+        <p>Explore our curated selection of luxury perfumes and fragrances</p>
+        <div class="hero-buttons">
+          <button class="btn-primary" routerLink="/products">Shop Now</button>
+          <button class="btn-secondary" routerLink="/products" [queryParams]="{category: 'new'}">New Arrivals</button>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <mat-icon>expand_more</mat-icon>
+      </div>
+    </section>
+    <!-- New Products Section -->
+    <div class="new-products-section">
+      <div class="section-header">
+        <h2>New Products</h2>
+        <a routerLink="/products" class="see-all">See all →</a>
+      </div>
+
+      <!-- Carousel CSS Puro -->
+      <div class="carousel-container">
+        <button class="carousel-btn carousel-prev" (click)="prevSlide()">
+          <mat-icon>chevron_left</mat-icon>
+        </button>
+        
+        <div class="carousel-track-container">
+          <div class="carousel-track" [style.transform]="'translateX(' + translateX + '%)'">
+            @for (product of products; track product.id) {
+              <div class="carousel-slide">
+                <app-product-card-vertical />
+              </div>
+            }
+          </div>
+        </div>
+        
+        <button class="carousel-btn carousel-next" (click)="nextSlide()">
+          <mat-icon>chevron_right</mat-icon>
+        </button>
+      </div>
+      
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        @for (product of products; track product.id; let i = $index) {
+          <button 
+            class="indicator-dot" 
+            [class.active]="i === currentIndex"
+            (click)="goToSlide(i)">
+          </button>
+        }
+      </div>
+    </div>
+    <!-- Best Sellers Section -->
+    <section class="best-sellers-section">
+      <div class="section-header">
+        <h2>Best Sellers</h2>
+        <a routerLink="/products" class="see-all">See all →</a>
+      </div>
+      <div class="best-sellers-grid">
+        <div class="gender-column men">
+          <div class="gender-header">
+            <mat-icon>male</mat-icon>
+            <h3>For Him</h3>
+          </div>
+          <div class="products-row">
+            @for (item of [1,2,3]; track item) {
+              <app-product-card-vertical />
+            }
+          </div>
+        </div>
+        <div class="gender-column women">
+          <div class="gender-header">
+            <mat-icon>female</mat-icon>
+            <h3>For Her</h3>
+          </div>
+          <div class="products-row">
+            @for (item of [1,2,3]; track item) {
+              <app-product-card-vertical />
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop by Gender Section -->
+    <section class="shop-by-gender-section">
+      <div class="section-header">
+        <h2>Shop by Gender</h2>
+      </div>
+      <div class="gender-cards">
+        <a routerLink="/products" [queryParams]="{gender: 'men'}" class="gender-card men-card">
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="label">Collection</span>
+            <h3>For Him</h3>
+            <span class="cta">Shop Now →</span>
+          </div>
+        </a>
+        <a routerLink="/products" [queryParams]="{gender: 'women'}" class="gender-card women-card">
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="label">Collection</span>
+            <h3>For Her</h3>
+            <span class="cta">Shop Now →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured Brands Section -->
+    <section class="featured-brands-section">
+      <div class="section-header">
+        <h2>Featured Brands</h2>
+      </div>
+      <div class="brands-grid">
+        <a href="#" class="brand-item">
+          <img src="https://placehold.co/150x80?text=Dior" alt="Dior" />
+        </a>
+        <a href="#" class="brand-item">
+          <img src="https://placehold.co/150x80?text=Chanel" alt="Chanel" />
+        </a>
+        <a href="#" class="brand-item">
+          <img src="https://placehold.co/150x80?text=Versace" alt="Versace" />
+        </a>
+        <a href="#" class="brand-item">
+          <img src="https://placehold.co/150x80?text=Armani" alt="Armani" />
+        </a>
+        <a href="#" class="brand-item">
+          <img src="https://placehold.co/150x80?text=YSL" alt="YSL" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Promotional Section -->
+    <section class="promotional-section">
+      <div class="promo-grid">
+        <div class="promo-card promo-discount">
+          <div class="promo-content">
+            <span class="promo-badge">Limited Time</span>
+            <h3>20% OFF</h3>
+            <p>On your first purchase</p>
+            <span class="promo-code">Use code: WELCOME20</span>
+            <button class="promo-btn">Shop Now</button>
+          </div>
+        </div>
+        <div class="promo-card promo-newsletter">
+          <div class="promo-content">
+            <mat-icon>mail_outline</mat-icon>
+            <h3>Stay Updated</h3>
+            <p>Subscribe to get exclusive offers</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button class="subscribe-btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
